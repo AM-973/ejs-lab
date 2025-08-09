@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= categoryName %> Menu</title>
+</head>
+
+    <body>
+        <%- include('./partials/nav') %>
+         <h1><%= categoryName %></h1>
+<ul style="list-style: none; justify-content: center; align-items: center; display: flex; max-width: 500px;">
+    <% menuItems.forEach(item => { %>
+      <li>
+        <br/>
+        <strong><%= item.name %></strong>
+        <p>Price: $<%= item.price %></p>
+        <p>Rating: <%= item.rating === 5 ? item.rating + " ⭐⭐⭐⭐⭐" : item.rating %></p>
+        <p><%= item.details %></p>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
+
