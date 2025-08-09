@@ -6,49 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
 </head>
-    <body>
-        <%- include('./partials/nav') %>
+
+<body>
+    <%- include('./partials/nav') %>
         <h1>Full Menu</h1>
         <h2 style="justify-content: center; align-items: center; display: flex;">Mains</h2>
         <ul style="list-style: none; justify-content: center; align-items: center; display: flex;">
-        <% RESTAURANT.menu.forEach(item => { if (item.category === 'mains') { %>
-        <li>
-        <strong>
-        <%= item.name %>
-        </strong> 
-        <p>Price: $<%= item.price %></p>
-        <p>Rating: <%= item.rating === 5 ? item.rating + " ⭐⭐⭐⭐⭐" : item.rating %></p>
-        <p><%= item.details %></p>
-        </li>
-        <% } }) %>
+            <% RESTAURANT.menu.forEach(item=> { if (item.category === 'mains') { %>
+                <li>
+                    <strong>
+                        <%= item.name %>
+                    </strong>
+                    <p>Price: $<%= item.price %>
+                    </p>
+                    <p>Rating: <%= item.rating===5 ? item.rating + " ⭐⭐⭐⭐⭐" : item.rating %>
+                    </p>
+                    <p>
+                        <%= item.details %>
+                    </p>
+                </li>
+                <% } }) %>
         </ul>
-        <hr/>
+        <hr />
         <h2 style="justify-content: center; align-items: center; display: flex;">Desserts</h2>
         <ul style="list-style: none; justify-content: center; align-items: center; display: flex;max-width: 500px;">
-        <% RESTAURANT.menu.forEach(item => { if (item.category === 'desserts') { %>
-        <li>
-        <strong>
-        <%= item.name %>
-        </strong> 
-        <p>Price: $<%= item.price %></p>
-        <p>Rating: <%= item.rating === 5 ? item.rating + " ⭐⭐⭐⭐⭐" : item.rating %></p>
-        <p><%= item.details %></p>
-        </li>
-        <% } }) %>
+            <% RESTAURANT.menu.forEach(item=> { if (item.category === 'desserts') { %>
+                <li>
+                    <strong>
+                        <%= item.name %>
+                    </strong>
+                    <p>Price: $<%= item.price %>
+                    </p>
+                    <p>Rating: <%= item.rating===5 ? item.rating + " ⭐⭐⭐⭐⭐" : item.rating %>
+                    </p>
+                    <p>
+                        <%= item.details %>
+                    </p>
+                </li>
+                <% } }) %>
         </ul>
-        <hr/>
+        <hr />
         <h2 style="justify-content: center; align-items: center; display: flex;">Sides</h2>
         <ul style="list-style: none; justify-content: center; align-items: center; display: flex;">
-        <% RESTAURANT.menu.forEach(item => { if (item.category === 'sides') { %>
-        <li>
-        <strong>
-        <%= item.name %>
-        </strong>
-        <p>Price: $<%= item.price %></p>
-        <p>Rating: <%= item.rating === 5 ? item.rating + " ⭐⭐⭐⭐⭐" : item.rating %></p>
-        <p><%= item.details %></p>
-        </li>
-        <% } }) %>
+            <% RESTAURANT.menu.forEach(item=> { if (item.category === 'sides') { %>
+                <li>
+                    <strong>
+                        <%= item.name %>
+                    </strong>
+                    <p>Price: $<%= item.price %>
+                    </p>
+                    <p>Rating: <%= item.rating===5 ? item.rating + " ⭐⭐⭐⭐⭐" : item.rating %>
+                    </p>
+                    <p>
+                        <%= item.details %>
+                    </p>
+                </li>
+                <% } }) %>
         </ul>
 </body>
+
 </html>
